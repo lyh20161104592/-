@@ -9,7 +9,7 @@
 int main()
 {
     int a[10];
-    int j,i,k,n;
+    int j,i,k;
     int temp;
     printf("请输入十个整数\n");
     for(i=0;i<=9;i++)
@@ -20,18 +20,19 @@ int main()
     {
         for(k=0;k<9-j;k++)
         {
-          if(a[i]>a[i+1])
+          if(a[k]>a[k+1])
             {
-            temp=a[i+1];
-            a[i]=temp;
-            a[i+1]=a[i];
+            temp=a[k];
+            a[k]=a[k+1];
+            a[k+1]=temp;
              }
         }
+    }
         for(k=0;k<i;k++)
         {
-            printf("%d",a[i]);
+            printf("%d ",a[k]);
         }
-    }
+    
         printf("\n");
         return 0;
 }
